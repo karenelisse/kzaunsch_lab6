@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><title>Lab 5: Ajax Weather</title>
+    <script src="./kzaunsch_lab5_act1.js"
+        type="text/javascript"></script>
+    </head>
+    <body>
+        <div align="center">
+            <table border="5">
+                <tr><th class="title">Lab 5: Ajax Weather</th></tr>
+            </table>
+        </div>
+        <div id="errors"></div>
+        <table id ="tableweather" border="1" width="650">
+            <tr>
+                <th><b>City Name</b></th>
+                <th><b>Timestamp <br> (yyyy:mm:dd:hh:mm:ss)</b></th>
+                <th><b>Temperature in *C</b></th>
+                <th><b>Humidity in %</b></th>
+                <th><b>Wind Speed in miles per hour</b></th>
+                <th><b>Cloudiness in %</b></th>
+            </tr>
+            <tr id ="tablecity1"></tr>
+            <tr id ="tablecity1b"></tr>
+            <tr id ="tablecity2"></tr>
+            <tr id ="tablecity2b"></tr>
+            <tr id="tablecity3"></tr>
+            <tr id="tablecity3b"></tr>
+        </table> 
+        <br> Please Select a third city: 
+        <div title='Select a City'>
+            <select name="thirdcity" onchange="showCity(this.value)">
+                <option value="Moscow">Moscow, Russia</option>
+                <option value="Dili">Dili, Timor Leste</option>
+                <option value="Sydney">Sydney, Australia</option>
+                <option value="Glasgow">Glasgow, Scotland</option>
+                <option value="Auckland">Auckland, New Zealand</option>
+            </select>
+        </div>
+        <input type="button" value="Refresh" onClick="refreshWeather()">
+        <div id="tablethirdcity"></div>
+        <p id="temperatureStats"></p>
+        <p id="humidityStats"></p>
+        <p id="weatherStats"></p>
+        <input type="button" value="Clear Data" onClick="clearStorage()">
+    </body>
+</html>
+
+
+<!--<fieldset>
+  <legend>Data from Server, Result Shown in Alert Box</legend>
+    <input type="button" value="Show Server Message in Alert"
+           onclick='ajaxAlert("http://localhost/message-data.html")'/>
+</fieldset> --!>
